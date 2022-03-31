@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <H1></H1>
+        </a>
+            <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo02"></div> -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="logout" (click)="logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+</nav>
+<br>
+<div>
+    <td>User Details</td>
+    <td>Search</td>
+    <td><input type="text" [(ngModel)]="filterBy" placeholder="filterBy" (keyup)="filter()"></td>
+    <td class="user"> <a  routerLink="/adduser"> AddUser</a> </td>
+</div>
+<br>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>UserName</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>UserType</th>
+                <th>Phonenumber</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let m of data;index as i">
+                <td>{{m.username}}</td>
+                <td>{{m.password}}</td>
+                <td>{{m.email}}</td>
+                <td>{{m.usertype}}</td>
+                <td>{{m.phonenumber}}</td>
+                <td>{{m.address}}</td>
+                <td><a [routerLink]="['/edit',i]" >Edit</a></td>
+                <td><input type="button" value="delete" (click)="delete(m.id)"> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

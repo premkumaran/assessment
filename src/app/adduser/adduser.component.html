@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <H1></H1>
+        </a>
+            <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo02"></div> -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="logout" (click)="logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+</nav>
+<br>
+
+<div class="container">
+    <table>
+        <tr>
+            <td>UserName</td>
+            <td><input type="text" placeholder="Enter the name" [(ngModel)]="insert.username"> </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" placeholder="Enter the email" [(ngModel)]="insert.email"> </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" placeholder="Enter the password" [(ngModel)]="insert.password"> </td>
+        </tr>
+        <tr>
+            <td>Phonenumber</td>
+            <td><input type="text" placeholder="Enter the phonenumber" [(ngModel)]="insert.phonenumber"> </td>
+        </tr>
+        <tr>
+            <td>UserType</td>
+            <td><select name="Usertype" [(ngModel)]="insert.usertype">
+                <option value="admin">Admin</option>
+                <option value="staff">Staff</option>
+              </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" placeholder="Enter the Address" [(ngModel)]="insert.address" > </td>
+        </tr>
+        <tr>
+            <td></td>
+            <!-- <td><input type="button" value="register" (click)="add()"> </td> -->
+            <td><input type="button" [value]="text" (click)="perform()"></td>
+        </tr>
+    </table>
+    </div>
+    
+

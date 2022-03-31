@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <H1></H1>
+        </a>
+        </div>
+</nav>
+<br>
+<div class="container">
+    <table>
+        <tr>
+            <td>UserName</td>
+            <td><input type="text" placeholder="Enter the name" [(ngModel)]="log.username"> </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" placeholder="Enter the password" [(ngModel)]="log.password"> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <!-- <input type="button" value=<td >"login" (click)="login()" ></td> -->
+            <button (click)="login()">login</button>
+           
+        </tr>
+    </table>
+</div>
